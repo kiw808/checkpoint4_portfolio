@@ -20,6 +20,8 @@ Awesome ideas from your imagination, you are your own product owner!
 ### Made with :
 - PHP 7.4
 - Symfony 5.1
+- Doctrine ORM
+- MySQL
 
 ### Product owner :
 Pierre Muller
