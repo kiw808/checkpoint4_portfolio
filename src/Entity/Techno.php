@@ -44,9 +44,15 @@ class Techno
      */
     private $projects;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Education::class, inversedBy="technos")
+     */
+    private $learnedAt;
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();
+        $this->learnedAt = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -123,6 +129,32 @@ class Techno
     {
         if ($this->projects->contains($project)) {
             $this->projects->removeElement($project);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Education[]
+     */
+    public function getLearnedAt(): Collection
+    {
+        return $this->learnedAt;
+    }
+
+    public function addLearnedAt(Education $learnedAt): self
+    {
+        if (!$this->learnedAt->contains($learnedAt)) {
+            $this->learnedAt[] = $learnedAt;
+        }
+
+        return $this;
+    }
+
+    public function removeLearnedAt(Education $learnedAt): self
+    {
+        if ($this->learnedAt->contains($learnedAt)) {
+            $this->learnedAt->removeElement($learnedAt);
         }
 
         return $this;

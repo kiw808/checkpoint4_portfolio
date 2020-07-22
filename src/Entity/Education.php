@@ -59,9 +59,15 @@ class Education
      */
     private $skills;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Techno::class, mappedBy="learnedAt")
+     */
+    private $technos;
+
     public function __construct()
     {
         $this->skills = new ArrayCollection();
+        $this->technos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -176,6 +182,34 @@ class Education
         if ($this->skills->contains($skill)) {
             $this->skills->removeElement($skill);
             $skill->removeLearnedAt($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Techno[]
+     */
+    public function getTechnos(): Collection
+    {
+        return $this->technos;
+    }
+
+    public function addTechno(Techno $techno): self
+    {
+        if (!$this->technos->contains($techno)) {
+            $this->technos[] = $techno;
+            $techno->addLearnedAt($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTechno(Techno $techno): self
+    {
+        if ($this->technos->contains($techno)) {
+            $this->technos->removeElement($techno);
+            $techno->removeLearnedAt($this);
         }
 
         return $this;
