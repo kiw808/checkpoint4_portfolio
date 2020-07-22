@@ -17,11 +17,16 @@ As a futur talented and sought-after Web Developer, you all have to pass a lot o
 Awesome ideas from your imagination, you are your own product owner!
 
 ## Project
-### Made with :
+### Tech used :
 - PHP 7.4
 - Symfony 5.1
 - Doctrine ORM
 - MySQL
+
+### Tools used :
+- Git / GitHub
+- Trello
+- Draw.io (UML)
 
 ### Product owner :
 Pierre Muller
