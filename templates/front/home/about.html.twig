@@ -16,28 +16,49 @@
 
         <div class="columns">
             <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <h4 class="title is-4">Skills</h4>
-                        <div class="content">
-                            <ul>
-                                {% for techno in technos %}
-                                    <li><strong>{{ techno.name }}</strong> | {{ techno.type }}</li>
-                                {% endfor %}
-                            </ul>
+                <h4 class="title is-5">
+                    <span class="icon">
+                        <ion-icon name="terminal-outline"></ion-icon>
+                    </span>
+                    <span>Working with</span>
+                </h4>
+                <div class="field is-grouped is-grouped-multiline">
+                    {% set color = '' %}
+                    {% for techno in technos %}
+                        {% if techno.type == 'Programming language' %}
+                            {% set color = 'is-primary' %}
+                        {% elseif techno.type == 'Web language' %}
+                            {% set color = 'is-warning' %}
+                        {% elseif techno.type == 'Framework' %}
+                            {% set color = 'is-success' %}
+                        {% endif %}
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <span class="tag {{ color }}"></span>
+                                <span class="tag is-dark">{{ techno.name }}</span>
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <h4 class="title is-4">Education</h4>
-                        <div class="content">
-                            <p><strong>Wild Code School</strong> - Strasbourg - 2020</p>
-                            <p>Web development and mobile web development PHP / Symfony </p>
-                        </div>
-                    </div>
+                <h4 class="title is-5">
+                    <span class="icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </span>
+                    <span>Education</span>
+                </h4>
+                <div class="content">
+                    <ul>
+                        <li class="pb-5">
+                            <h6><span class="has-text-danger">Wild Code School</span> - Strasbourg, FR - 2020</h6>
+                            <p>Web development and mobile web development <strong>PHP / Symfony</strong></p>
+                        </li>
+                        <li class="pb-5">
+                            <h6><span class="has-text-warning-dark">Institut St-Luc</span> - Brussels, BE - 2013</h6>
+                            <p>Graphic arts school - graphic novel/comics section </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
