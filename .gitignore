@@ -16,6 +16,7 @@
 ###< symfony/phpunit-bridge ###
 
 .idea/
+assets/css/palette.scss
 portfolio-UML-final.pdf
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
