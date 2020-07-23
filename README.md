@@ -17,6 +17,13 @@ As a futur talented and sought-after Web Developer, you all have to pass a lot o
 Awesome ideas from your imagination, you are your own product owner!
 
 ## Project
+### Features :
+- Home frontpage with basic informations
+- Login system
+- Admin panel
+- Secured admin access
+- Admin can add/edit the website's content
+
 ### Tech used :
 - PHP 7.4
 - Symfony 5.1
@@ -26,9 +33,13 @@ Awesome ideas from your imagination, you are your own product owner!
 - SCSS
 
 ### Tools used :
+- PhpStorm
 - Git / GitHub
 - Trello
 - Draw.io (UML)
+
+### Database schema :
+![UML](portfolio-UML-final.png)
 
 ### Product owner :
 Pierre Muller
