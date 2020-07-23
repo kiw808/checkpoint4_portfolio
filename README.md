@@ -19,8 +19,10 @@ Awesome ideas from your imagination, you are your own product owner!
 ## Project
 ### Features :
 - Home frontpage with basic informations
+- Login system
 - Admin panel
 - Secured admin access
+- Admin can add/edit the website's content
 
 ### Tech used :
 - PHP 7.4
@@ -35,6 +37,9 @@ Awesome ideas from your imagination, you are your own product owner!
 - Git / GitHub
 - Trello
 - Draw.io (UML)
+
+### Database schema :
+![UML](portfolio-UML-final.png)
 
 ### Product owner :
 Pierre Muller
