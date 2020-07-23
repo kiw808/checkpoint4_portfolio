@@ -11,6 +11,7 @@
         <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     </head>
     <body>
+        <a href="{{ path('admin_dash') }}">Dashboard</a>
         {% block body %}{% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
