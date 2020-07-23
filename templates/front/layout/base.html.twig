@@ -11,6 +11,7 @@
         <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     </head>
     <body>
+        {{ include('front/layout/_navbar.html.twig') }}
         {% block body %}{% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
