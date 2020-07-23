@@ -6,6 +6,9 @@
             <a class="navbar-item" href="{{ path('front_home') }}">
                 PM
             </a>
+            <a class="navbar-item" href="#">
+                Blog
+            </a>
 
             {# Burger #}
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
@@ -33,7 +36,10 @@
 
                 </span>
                 <a class="navbar-item" href="#">
-                    Contact me
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <span>Contact me</span>
                 </a>
                 <span class="navbar-item">
                     <a href="{{ path('app_login') }}">
