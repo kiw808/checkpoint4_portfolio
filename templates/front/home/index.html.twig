@@ -1,0 +1,14 @@
+{% extends 'front/layout/base.html.twig' %}
+
+{% block title %}Pierre MULLER | Web developer{% endblock %}
+
+{% block body %}
+    {# Hero section #}
+    {{ include('front/home/hero.html.twig') }}
+
+    {# About section #}
+    {{ include('front/home/about.html.twig') }}
+
+    {# Footer #}
+    {{ include('front/layout/_footer.html.twig') }}
+{% endblock %}
