@@ -1,0 +1,10 @@
+// Custom colors :
+$gunmetal: rgba(43, 48, 58, 1);
+$cinnabar: rgba(214, 73, 51, 1);
+$minion-yellow: rgba(252, 231, 98, 1);
+$green-blue-crayola: rgba(25, 130, 196, 1);
+
+// Override bulma colors
+$dark: $gunmetal;
+
+@import "~bulma/bulma";
