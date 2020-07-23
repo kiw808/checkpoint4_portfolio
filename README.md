@@ -17,6 +17,11 @@ As a futur talented and sought-after Web Developer, you all have to pass a lot o
 Awesome ideas from your imagination, you are your own product owner!
 
 ## Project
+### Features :
+- Home frontpage with basic informations
+- Admin panel
+- Secured admin access
+
 ### Tech used :
 - PHP 7.4
 - Symfony 5.1
@@ -26,6 +31,7 @@ Awesome ideas from your imagination, you are your own product owner!
 - SCSS
 
 ### Tools used :
+- PhpStorm
 - Git / GitHub
 - Trello
 - Draw.io (UML)
