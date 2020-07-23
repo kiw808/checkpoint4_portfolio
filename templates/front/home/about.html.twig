@@ -17,22 +17,37 @@
         <div class="columns">
             <div class="column">
                 <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-header-title">Working with</h4>
+                    </div>
                     <div class="card-content">
-                        <h4 class="title is-4">Skills</h4>
-                        <div class="content">
-                            <ul>
-                                {% for techno in technos %}
-                                    <li><strong>{{ techno.name }}</strong> | {{ techno.type }}</li>
-                                {% endfor %}
-                            </ul>
+                        <div class="field is-grouped is-grouped-multiline">
+                            {% set color = '' %}
+                            {% for techno in technos %}
+                                {% if techno.type == 'Programming language' %}
+                                    {% set color = 'is-primary' %}
+                                {% elseif techno.type == 'Web language' %}
+                                    {% set color = 'is-warning' %}
+                                {% elseif techno.type == 'Framework' %}
+                                    {% set color = 'is-success' %}
+                                {% endif %}
+                                <div class="control">
+                                    <div class="tags has-addons">
+                                        <span class="tag {{ color }}"></span>
+                                        <span class="tag is-dark">{{ techno.name }}</span>
+                                    </div>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-header-title">Education</h4>
+                    </div>
                     <div class="card-content">
-                        <h4 class="title is-4">Education</h4>
                         <div class="content">
                             <p><strong>Wild Code School</strong> - Strasbourg - 2020</p>
                             <p>Web development and mobile web development PHP / Symfony </p>
