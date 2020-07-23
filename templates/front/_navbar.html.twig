@@ -1,0 +1,41 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        {# Brand #}
+        <div class="navbar-brand">
+            {# Logo #}
+            <a class="navbar-item" href="{{ path('front_home') }}">
+                PM
+            </a>
+
+            {# Burger #}
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        {# Menu #}
+        <div id="navMenu" class="navbar-menu">
+            {# Left #}
+            <div class="navbar-start">
+            </div>
+
+            {# Right #}
+            <div class="navbar-end">
+                <span class="navbar-item">
+                    <a class="button is-dark is-inverted" href="https://github.com/kiw808">
+                        <span class="icon">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </span>
+                        <span>GitHub</span>
+                    </a>
+
+                </span>
+                <a class="navbar-item" href="#">
+                    Contact me
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
