@@ -27,7 +27,7 @@ class FrontController extends AbstractController
     {
         $technos = $this->technos->findAll();
 
-        return $this->render('front/index.html.twig', [
+        return $this->render('front/home/index.html.twig', [
             'technos' => $technos,
         ]);
     }
