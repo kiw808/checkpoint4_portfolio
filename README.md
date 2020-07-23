@@ -29,8 +29,10 @@ Awesome ideas from your imagination, you are your own product owner!
 - Symfony 5.1
 - MySQL
 - Doctrine ORM
+- Yarn
 - Bulma
 - SCSS
+- Webpack Encore
 
 ### Tools used :
 - PhpStorm
@@ -38,8 +40,34 @@ Awesome ideas from your imagination, you are your own product owner!
 - Trello
 - Draw.io (UML)
 
-### Database schema :
-![UML](portfolio-UML-final.png)
+## Setup
+1. `$ git clone https://github.com/kiw808/checkpoint4_portfolio.git`
+2. Create `.env.local` file from `.env and configure your database
+3. `$ cd <project_directory>`
+4. `$ composer install`
+5. `$ bin/console doctrine:database:create`
+6. `$ bin/console doctrine:migrations:migrate`
+7. `$ bin/console doctrine:fixtures:load`
+8. `$ yarn install`
+9. `$ yarn encore dev`
+10. `$ symfony serve`
+11. Your'e good to go, just head to `localhost:8000` !
+
+Dashboard login :
+- username : admin
+- password : admin
+
+
+***
+
+### Product backlog :
+- [Trello](https://trello.com/invite/b/g14ISXDM/f47abc0714a4bed55ca4d783bba43154/portfolio)
+
+### Wireframe :
+![Wireframe_1](ressources/wireframe_1.jpg)
+![Wireframe_2](ressources/wireframe_2.jpg)
+### Database conceptual model :
+![UML](ressources/portfolio-UML-final.png)
 
 ### Product owner :
 Pierre Muller
