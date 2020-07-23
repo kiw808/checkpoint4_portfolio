@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Client;
 use App\Entity\Project;
+use App\Entity\Techno;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -23,9 +24,15 @@ class ProjectType extends AbstractType
             ->add('description', TextareaType::class)
             ->add('client', EntityType::class, [
                 'class' => Client::class,
+                'placeholder' => '--- Client ---',
                 'choice_label' => 'name',
             ])
-            ->add('technos')
+            ->add('technos', EntityType::class, [
+                'class' => Techno::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true,
+            ])
         ;
     }
 
