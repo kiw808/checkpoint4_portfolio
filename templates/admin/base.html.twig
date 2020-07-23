@@ -11,10 +11,27 @@
         <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     </head>
     <body>
-        <a href="{{ path('admin_dashboard') }}">Dashboard</a>
-        <a href="{{ path('front_home') }}">Home</a>
-        <a href="{{ path('app_logout') }}">Logout</a>
-        {% block body %}{% endblock %}
+        {# Navbar #}
+        {{ include('admin/dashboard/_navbar.html.twig') }}
+
+        <div class="container">
+            <div class="columns">
+                <div class="column is-3">
+
+                    {# Side Menu #}
+                    {{ include('admin/dashboard/_sidemenu.html.twig') }}
+
+                </div>
+                <div class="column is-9">
+
+                    {# Breadcrumb #}
+                    {% block breadcrumb %}{% endblock %}
+
+                    {# Body #}
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

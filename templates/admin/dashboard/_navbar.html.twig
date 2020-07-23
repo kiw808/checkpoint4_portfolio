@@ -1,0 +1,25 @@
+<nav class="navbar mb-4 is-primary">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item brand-text" href="{{ path('admin_dashboard') }}">
+                PM Admin
+            </a>
+            <div class="navbar-burger burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="{{ path('front_home') }}">
+                    Front
+                </a>
+                <a class="navbar-item" href="{{ path('app_logout') }}">
+                    Log out
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
