@@ -14,24 +14,26 @@
         {# Navbar #}
         {{ include('admin/dashboard/_navbar.html.twig') }}
 
-        <div class="container">
-            <div class="columns">
-                <div class="column is-3">
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-3">
 
-                    {# Side Menu #}
-                    {{ include('admin/dashboard/_sidemenu.html.twig') }}
+                        {# Side Menu #}
+                        {{ include('admin/dashboard/_sidemenu.html.twig') }}
 
-                </div>
-                <div class="column is-9">
+                    </div>
+                    <div class="column is-9">
 
-                    {# Breadcrumb #}
-                    {% block breadcrumb %}{% endblock %}
+                        {# Breadcrumb #}
+                        {% block breadcrumb %}{% endblock %}
 
-                    {# Body #}
-                    {% block body %}{% endblock %}
+                        {# Body #}
+                        {% block body %}{% endblock %}
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
