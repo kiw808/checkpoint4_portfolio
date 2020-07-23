@@ -20,6 +20,10 @@ Awesome ideas from your imagination, you are your own product owner!
 ### Tech used :
 - PHP 7.4
 - Symfony 5.1
+- MySQL
+- Doctrine ORM
+- Bulma
+- SCSS
 
 ### Tools used :
 - Git / GitHub
