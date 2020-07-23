@@ -2,38 +2,57 @@
 
 {% block title %}Client index{% endblock %}
 
+{% block breadcrumb %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="{{ path('admin_dashboard') }}">Dashboard</a></li>
+            <li class="is-active"><a>Clients</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
 {% block body %}
-    <h1>Client index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for client in clients %}
-            <tr>
-                <td>{{ client.id }}</td>
-                <td>{{ client.name }}</td>
-                <td>{{ client.description }}</td>
-                <td>{{ client.image }}</td>
-                <td>
-                    <a href="{{ path('admin_client_show', {'id': client.id}) }}">show</a>
-                    <a href="{{ path('admin_client_edit', {'id': client.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="card">
+        <div class="card-content">
+            <nav class="navbar-menu mb-3">
+                <div class="navbar-start">
+                    <h4 class="title is-4">Clients</h4>
+                </div>
+                <div class="navbar-end">
+                    <a class="button is-info" href="{{ path('admin_client_new') }}">Create new</a>
+                </div>
+            </nav>
 
-    <a href="{{ path('admin_client_new') }}">Create new</a>
+            <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for client in clients %}
+                    <tr>
+                        <td>{{ client.id }}</td>
+                        <td>{{ client.name }}</td>
+                        <td>{{ client.description }}</td>
+                        <td>{{ client.image }}</td>
+                        <td>
+                            <a href="{{ path('admin_client_show', {'id': client.id}) }}">details</a>
+                            <a href="{{ path('admin_client_edit', {'id': client.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

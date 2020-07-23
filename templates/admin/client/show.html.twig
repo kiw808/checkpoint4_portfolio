@@ -2,6 +2,16 @@
 
 {% block title %}Client{% endblock %}
 
+{% block breadcrumb %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="{{ path('admin_dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ path('admin_client_index') }}">Clients</a></li>
+            <li><a>Details</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
 {% block body %}
     <h1>Client</h1>
 
