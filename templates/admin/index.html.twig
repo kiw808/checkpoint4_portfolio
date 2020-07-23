@@ -4,6 +4,7 @@
 
 {% block body %}
     <h1 class="title">Admin dashboard</h1>
+    <h3 class="subtitle">{{ greet }}</h3>
     <ul>
         <li><a href="{{ path('admin_client_index') }}">Clients</a></li>
         <li><a href="{{ path('admin_project_index') }}">Projects</a></li>
