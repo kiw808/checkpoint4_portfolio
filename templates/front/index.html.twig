@@ -1,10 +1,19 @@
 {% extends 'front/layout/base.html.twig' %}
 
-{% block title %}Hello FrontController!{% endblock %}
+{% block title %}Pierre MULLER | Web developer{% endblock %}
 
 {% block body %}
     {# Hero #}
     {{ include('front/hero.html.twig') }}
 
+    {# Hero #}
+    {{ include('front/about.html.twig') }}
 
+    {# Footer #}
+    <footer class="footer">
+        <div class="container">
+            <p>Developed with <span class="icon"><ion-icon name="heart"></ion-icon></span> by Pierre Muller, using Symfony and Bulma</p>
+            <p>The source code is licenced MIT</p>
+        </div>
+    </footer>
 {% endblock %}
