@@ -1,0 +1,66 @@
+<section class="section" id="about">
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column is-half mb-6">
+                <h2 class="title has-text-centered">About me</h2>
+                <p class="has-text-centered">
+                    Hi there, I'm a <strong>back end web developer</strong> who is finishing his training at
+                    <strong>Wild Code School</strong>.
+                    I'm currently looking for an <strong>internship</strong> or first job opportunities, so don't hesitate to
+                    <a href="#">hit me up</a> !
+                </p>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h4 class="title is-5">
+                    <span class="icon">
+                        <ion-icon name="terminal-outline"></ion-icon>
+                    </span>
+                    <span>Working with</span>
+                </h4>
+                <div class="field is-grouped is-grouped-multiline">
+                    {% set color = '' %}
+                    {% for techno in technos %}
+                        {% if techno.type == 'Programming language' %}
+                            {% set color = 'is-primary' %}
+                        {% elseif techno.type == 'Web language' %}
+                            {% set color = 'is-warning' %}
+                        {% elseif techno.type == 'Framework' %}
+                            {% set color = 'is-success' %}
+                        {% endif %}
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <span class="tag {{ color }}"></span>
+                                <span class="tag is-dark">{{ techno.name }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column">
+                <h4 class="title is-5">
+                    <span class="icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </span>
+                    <span>Education</span>
+                </h4>
+                <div class="content">
+                    <ul>
+                        <li class="pb-5">
+                            <h6><span class="has-text-danger">Wild Code School</span> - Strasbourg, FR - 2020</h6>
+                            <p>Web development and mobile web development <strong>PHP / Symfony</strong></p>
+                        </li>
+                        <li class="pb-5">
+                            <h6><span class="has-text-warning-dark">Institut St-Luc</span> - Brussels, BE - 2013</h6>
+                            <p>Graphic arts school - graphic novel/comics section </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

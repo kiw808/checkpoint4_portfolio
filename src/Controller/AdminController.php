@@ -27,7 +27,7 @@ class AdminController extends AbstractController
 
         $greet = 'Welcome back ' . $user->getUsername() . ' !';
 
-        return $this->render('admin/index.html.twig', [
+        return $this->render('admin/dashboard/index.html.twig', [
             'greet' => $greet,
         ]);
     }
