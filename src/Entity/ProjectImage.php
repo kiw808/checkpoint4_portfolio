@@ -42,6 +42,11 @@ class ProjectImage
      */
     private $updatedAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Project::class, inversedBy="projectImages")
+     */
+    private $project;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -108,6 +113,18 @@ class ProjectImage
     public function setUpdatedAt(?\DateTimeInterface $updatedAt): ProjectImage
     {
         $this->updatedAt = $updatedAt;
+        return $this;
+    }
+
+    public function getProject(): ?Project
+    {
+        return $this->project;
+    }
+
+    public function setProject(?Project $project): self
+    {
+        $this->project = $project;
+
         return $this;
     }
 
