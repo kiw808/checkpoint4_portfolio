@@ -40,6 +40,10 @@ Awesome ideas from your imagination, you are your own product owner!
 - Trello
 - Draw.io (UML)
 
+#### Symfony extra bundles :
+- Security
+- Fixtures
+
 ## Setup
 1. `$ git clone https://github.com/kiw808/checkpoint4_portfolio.git`
 2. Create `.env.local` file from `.env and configure your database
