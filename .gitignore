@@ -18,6 +18,7 @@
 .idea/
 assets/css/palette.scss
 ressources/portfolio-UML-final.pdf
+public/images/
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/

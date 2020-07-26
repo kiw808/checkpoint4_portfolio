@@ -1,10 +1,50 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title %}ProjectImage index{% endblock %}
+{% block title %}Project Images{% endblock %}
+
+{% block breadcrumb %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="{{ path('admin_dashboard') }}">Dashboard</a></li>
+            <li class="is-active"><a href="{{ path('admin_project_image_index') }}">Project images</a></li>
+        </ul>
+    </nav>
+{% endblock %}
 
 {% block body %}
-    <h1>ProjectImage index</h1>
+    <nav class="navbar-menu mb-4">
+        <div class="navbar-start">
+            <h4 class="title is-4">Project images</h4>
+        </div>
+        <div class="navbar-end">
+            <a href="{{ path('admin_project_image_new') }}" class="button is-info">Upload new</a>
+        </div>
+    </nav>
+    <div class="columns is-multiline">
+        {% for image in project_images %}
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('images/projects/') ~ image.imageName}}">
+                    </div>
+                    <div class="card-content">
+                        <p>Last update : {{ image.updatedAt ? image.updatedAt|date('Y-m-d H:i:s') : '' }}</p>
+                        <p>Project : {{ image.project.name }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-item">
+                            <a href="{{ path('admin_project_image_show', {'id': image.id}) }}">details</a>
+                        </div>
+                        <div class="card-footer-item">
+                            <a href="{{ path('admin_project_image_edit', {'id': image.id}) }}">edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
+    {#
     <table class="table">
         <thead>
             <tr>
@@ -32,6 +72,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('admin_project_image_new') }}">Create new</a>
+    #}
 {% endblock %}
